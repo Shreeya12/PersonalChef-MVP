@@ -10,9 +10,10 @@ function Separator() {
        <Text style = {styles.title} > Pick Your Chef ..</Text>
        <Separator/>
        <Separator/>
-        <TextInput 
+      
+        <TextInput style = {styles.text}
           placeholder="Email" />
-        <TextInput
+        <TextInput style = {styles.text}
           secureTextEntry={true}
           placeholder="Password"
         />
@@ -27,7 +28,7 @@ function Separator() {
  <Text style = {styles.title} > Don't have an account yet ?</Text>
  <TouchableOpacity
           style={styles.button}
-          onPress={() => navigate('HomeScreen')}
+          onPress={() => navigation.navigate('HomeScreen')}
           underlayColor='pink'>
           <Text style={styles.loginText}>SignUp</Text>
  </TouchableOpacity>
@@ -48,16 +49,18 @@ const styles = StyleSheet.create({
       textAlign: 'center',
       marginVertical: 8,
     },
+    text: {
+      borderWidth: 0.2,
+      width: 300,
+      height: 50
+    },
    button: {
-    marginRight:40,
-    marginLeft:40,
-   marginTop:10,
-    paddingTop:10,
-    paddingBottom:10,
-    backgroundColor:'#1E6738',
-    borderRadius:10,
     borderWidth: 1,
-    borderColor: '#fff'
+    borderColor: '#007BFF',
+    padding: 15,
+    margin: 5,
+    backgroundColor:'brown',
+  
    },
    loginText: {
     color:'#fff',

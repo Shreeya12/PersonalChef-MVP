@@ -5,6 +5,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Homescreen from './Homescreen.js';
+import Chefinfo from './Chefinfo.js'
+import Yourbooking from './Yourbooking.js'
 
 const Stack = createStackNavigator();
 
@@ -12,6 +14,7 @@ export default class App extends React.Component{
   render() {
   return (
     <NavigationContainer style = {styles.container}>
+
       <Stack.Navigator>
     <Stack.Screen 
     name = 'Welcome'
@@ -20,8 +23,18 @@ export default class App extends React.Component{
   <Stack.Screen 
     name = 'Homescreen'
     component= {Homescreen}
-    options= {{title:'Homescreen'}} />
+    options= {{title:'Pick your Chef'}} />
+     <Stack.Screen 
+    name = 'Chefinfo'
+    component= {Chefinfo}
+    options= {{title:'Select your Chef'}} />
+    <Stack.Screen 
+    name = 'Yourbooking'
+    component= {Yourbooking}
+    options= {{title:'Your booking '}} />
+
       </Stack.Navigator>
+      
   
     </NavigationContainer>
   );
